@@ -29,6 +29,8 @@ export default function login() {
       },
     });
     Cookies.set("username", values.username);
+    dispatch({ type: UPDATE_LOADING, loading: false });
+
     router.push("/");
   }
 
